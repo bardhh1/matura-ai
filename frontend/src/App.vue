@@ -2,30 +2,6 @@
 
     <div class="app">
 
-        <nav class="navbar">
-
-            <div class="logo">
-                Matura AI
-            </div>
-
-            <div class="nav-links">
-
-                <router-link to="/">
-                    Home
-                </router-link>
-
-                <router-link to="/chat">
-                    Chat
-                </router-link>
-
-                <router-link to="/quiz">
-                    Quiz
-                </router-link>
-
-            </div>
-
-        </nav>
-
 
         <router-view />
 
