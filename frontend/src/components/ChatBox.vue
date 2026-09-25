@@ -1,7 +1,7 @@
 <script setup>
 
 import { ref } from "vue";
-import { askQuestion } from "../services/api";
+import { askQuestion, getActiveDocument, getApiError } from "../services/api";
 import ChatMessage from "./ChatMessage.vue";
 
 
@@ -11,10 +11,21 @@ const loading = ref(false);
 
 const messages = ref([]);
 
+const activeDocument = ref(getActiveDocument());
+
 
 async function sendMessage() {
 
     if (!question.value.trim()) {
+        return;
+    }
+
+    activeDocument.value = getActiveDocument();
+    if (!activeDocument.value?.id) {
+        messages.value.push({
+            role: "assistant",
+            content: "Upload a PDF or TXT document on the Home page first."
+        });
         return;
     }
 
@@ -32,12 +43,14 @@ async function sendMessage() {
     try {
 
         const result = await askQuestion(
+            activeDocument.value.id,
             userQuestion
         );
 
         messages.value.push({
             role: "assistant",
-            content: result.answer
+            content: result.answer,
+            sources: result.sources
         });
 
     } catch (error) {
@@ -46,7 +59,7 @@ async function sendMessage() {
 
         messages.value.push({
             role: "assistant",
-            content: "Something went wrong while contacting the server."
+            content: getApiError(error, "Something went wrong while contacting the server.")
         });
 
     } finally {
@@ -61,6 +74,10 @@ async function sendMessage() {
 <template>
 
     <div class="chat-container">
+
+        <div class="document-bar">
+            {{ activeDocument?.filename || "No document selected" }}
+        </div>
 
         <div class="messages">
 
@@ -111,6 +128,13 @@ async function sendMessage() {
     border: 1px solid #ddd;
     border-radius: 12px;
     background: white;
+}
+
+.document-bar {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    color: #666;
+    font-size: 14px;
 }
 
 .messages {

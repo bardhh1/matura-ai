@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import { uploadDocument } from "../services/api";
+import { getApiError, setActiveDocument, uploadDocument } from "../services/api";
 
 const selectedFile = ref(null);
 const uploading = ref(false);
@@ -32,15 +32,15 @@ async function handleUpload() {
             selectedFile.value
         );
 
+        setActiveDocument(result);
         message.value =
-            `${result.message} ${result.chunks} chunks created.`;
+            `${result.filename} is ready. ${result.chunks} study chunks created.`;
 
     } catch (err) {
 
         console.error(err);
 
-        error.value =
-            "Failed to upload the document.";
+        error.value = getApiError(err, "Failed to upload the document.");
 
     } finally {
 
