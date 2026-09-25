@@ -1,30 +1,25 @@
-class ChatHandler:
+import uuid
 
-    def __init__(self, retrieval_service, llm_service):
+from app.errors import DocumentNotFoundError
+from app.store.document_repository import DocumentRepository
+
+
+class ChatHandler:
+    def __init__(self, retrieval_service, llm_service, repository: DocumentRepository):
         self.retrieval_service = retrieval_service
         self.llm_service = llm_service
+        self.repository = repository
 
-    def ask(self, question: str):
+    def ask(self, document_id: uuid.UUID, question: str):
+        if self.repository.get(document_id) is None:
+            raise DocumentNotFoundError("The selected document does not exist")
 
-        # Retrieve relevant chunks
-        results = self.retrieval_service.retrieve(question)
+        results = self.retrieval_service.retrieve(document_id, question)
 
         if not results:
-            return "I don't know — not found in the document."
+            return (
+                "The uploaded material does not contain enough relevant information.",
+                [],
+            )
 
-        # Extract the text from the results
-        context_parts = []
-
-        for result in results:
-            context_parts.append(result["text"])
-
-        # Combine retrieved chunks
-        context = "\n\n".join(context_parts)
-
-        # Ask Gemini using only those chunks
-        answer = self.llm_service.answer_question(
-            question,
-            context
-        )
-
-        return answer
+        return self.llm_service.answer_question(question, results), results

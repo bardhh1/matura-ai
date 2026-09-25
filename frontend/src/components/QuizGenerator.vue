@@ -1,7 +1,7 @@
 <script setup>
 
 import { ref } from "vue";
-import { generateQuiz } from "../services/api";
+import { generateQuiz, getActiveDocument, getApiError } from "../services/api";
 
 
 const number = ref(10);
@@ -12,8 +12,16 @@ const loading = ref(false);
 
 const error = ref("");
 
+const activeDocument = ref(getActiveDocument());
+
 
 async function createQuiz() {
+
+    activeDocument.value = getActiveDocument();
+    if (!activeDocument.value?.id) {
+        error.value = "Upload a PDF or TXT document on the Home page first.";
+        return;
+    }
 
     loading.value = true;
 
@@ -24,6 +32,7 @@ async function createQuiz() {
     try {
 
         const result = await generateQuiz(
+            activeDocument.value.id,
             number.value
         );
 
@@ -33,8 +42,7 @@ async function createQuiz() {
 
         console.error(err);
 
-        error.value =
-            "Failed to generate quiz.";
+        error.value = getApiError(err, "Failed to generate quiz.");
 
     } finally {
 
@@ -50,6 +58,10 @@ async function createQuiz() {
     <div class="quiz">
 
         <h2>Generate Quiz</h2>
+
+        <p class="document-name">
+            {{ activeDocument?.filename || "No document selected" }}
+        </p>
 
         <div class="controls">
 
@@ -111,6 +123,11 @@ async function createQuiz() {
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
+}
+
+.document-name {
+    margin-bottom: 16px;
+    color: #666;
 }
 
 input {

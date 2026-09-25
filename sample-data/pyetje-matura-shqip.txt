@@ -1,0 +1,69 @@
+PYETJE PRAKTIKE PËR MATURËN
+
+MATEMATIKË
+
+1. Zgjidhe ekuacionin: 2x + 6 = 18.
+Përgjigjja: x = 6.
+
+2. Gjej rrënjët e ekuacionit x² - 5x + 6 = 0.
+Përgjigjja: x = 2 dhe x = 3.
+
+3. Sa është sipërfaqja e një rrethi me rreze 4 cm?
+Përgjigjja: 16π cm².
+
+4. Nëse f(x) = 3x - 2, sa është f(5)?
+Përgjigjja: f(5) = 13.
+
+5. Një trekëndësh kënddrejtë ka katetet 6 cm dhe 8 cm. Sa është hipotenuza?
+Përgjigjja: 10 cm.
+
+GJUHË SHQIPE
+
+6. Cilat janë tri gjinitë letrare kryesore?
+Përgjigjja: Lirika, epika dhe dramatika.
+
+7. Çfarë është metafora?
+Përgjigjja: Metafora është figurë stilistike që emërton një send ose dukuri me emrin e një tjetri, duke u mbështetur në ngjashmëri.
+
+8. Cila është tema kryesore e veprës “Bagëti e Bujqësia” të Naim Frashërit?
+Përgjigjja: Dashuria për atdheun, natyrën dhe jetën shqiptare.
+
+9. Çfarë funksioni ka kallëzuesi në fjali?
+Përgjigjja: Kallëzuesi tregon veprimin, gjendjen ose tiparin e kryefjalës.
+
+10. Cili është antonimi i fjalës “i guximshëm”?
+Përgjigjja: “Frikacak” ose “i frikësuar”, varësisht nga konteksti.
+
+HISTORI
+
+11. Në cilin vit u shpall Pavarësia e Shqipërisë?
+Përgjigjja: Më 28 nëntor 1912.
+
+12. Kush e shpalli Pavarësinë e Shqipërisë në Vlorë?
+Përgjigjja: Ismail Qemali, së bashku me delegatët shqiptarë.
+
+13. Kur u mbajt Lidhja Shqiptare e Prizrenit?
+Përgjigjja: Më 10 qershor 1878.
+
+14. Cili ishte qëllimi kryesor i Lidhjes Shqiptare të Prizrenit?
+Përgjigjja: Mbrojtja e trojeve shqiptare dhe bashkimi i tyre në një njësi autonome.
+
+15. Në cilin vit u shpall Pavarësia e Kosovës?
+Përgjigjja: Më 17 shkurt 2008.
+
+SHKENCA NATYRORE
+
+16. Cila është njësia matëse e forcës në Sistemin Ndërkombëtar?
+Përgjigjja: Njutoni, me simbolin N.
+
+17. Cila është formula kimike e ujit?
+Përgjigjja: H₂O.
+
+18. Cili organ i trupit të njeriut pompon gjakun?
+Përgjigjja: Zemra.
+
+19. Çfarë procesi përdorin bimët për ta shndërruar energjinë e dritës në energji kimike?
+Përgjigjja: Fotosintezën.
+
+20. Sa është shpejtësia e përafërt e dritës në vakum?
+Përgjigjja: Rreth 300 000 kilometra në sekondë, ose 3 × 10⁸ metra në sekondë.

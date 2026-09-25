@@ -25,6 +25,15 @@ defineProps({
             {{ message.content }}
         </div>
 
+        <details v-if="message.sources?.length" class="sources">
+            <summary>{{ message.sources.length }} sources</summary>
+            <div v-for="source in message.sources" :key="source.chunk" class="source">
+                <strong>Chunk {{ source.chunk }}</strong>
+                <span>{{ Math.round(source.score * 100) }}% match</span>
+                <p>{{ source.excerpt }}</p>
+            </div>
+        </details>
+
     </div>
 
 </template>
@@ -56,6 +65,23 @@ defineProps({
 
 .message-text {
     line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.sources {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.source {
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #ddd;
+}
+
+.source span {
+    margin-left: 8px;
+    color: #666;
 }
 
 </style>

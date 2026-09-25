@@ -1,73 +1,54 @@
+from io import BytesIO
 from pathlib import Path
+
 import pdfplumber
 
-
-def load_document(file_path: str) -> str:
-    """
-    Load text from a PDF or TXT file.
-    """
-
-    path = Path(file_path)
-
-    if not path.exists():
-        raise FileNotFoundError(f"File not found: {file_path}")
-
-    # TXT file
-    if path.suffix.lower() == ".txt":
-        return path.read_text(encoding="utf-8")
-
-    # PDF file
-    if path.suffix.lower() == ".pdf":
-        text = []
-
-        with pdfplumber.open(path) as pdf:
-            for page in pdf.pages:
-                page_text = page.extract_text()
-
-                if page_text:
-                    text.append(page_text)
-
-        return "\n".join(text)
-
-    raise ValueError("Only PDF and TXT files are supported.")
+from app.errors import EmptyDocumentError, UnsupportedDocumentError
 
 
-def chunk_text(text: str, target_words: int = 300) -> list[str]:
-    """
-    Split document text into chunks.
+def extract_text(filename: str, content: bytes) -> str:
+    """Extract UTF-8 text or text from a PDF without writing user files to disk."""
 
-    Each chunk tries to contain approximately target_words words.
-    """
+    suffix = Path(filename).suffix.lower()
+    if suffix == ".txt":
+        try:
+            text = content.decode("utf-8")
+        except UnicodeDecodeError as exc:
+            raise UnsupportedDocumentError("TXT files must use UTF-8 encoding") from exc
+    elif suffix == ".pdf":
+        try:
+            with pdfplumber.open(BytesIO(content)) as pdf:
+                pages = [page.extract_text() or "" for page in pdf.pages]
+        except Exception as exc:
+            raise UnsupportedDocumentError("The PDF could not be read") from exc
+        text = "\n\n".join(page for page in pages if page.strip())
+    else:
+        raise UnsupportedDocumentError("Only PDF and TXT files are supported")
 
-    paragraphs = text.split("\n\n")
+    normalized = "\n".join(line.rstrip() for line in text.replace("\x00", "").splitlines()).strip()
+    if not normalized:
+        raise EmptyDocumentError("The document does not contain extractable text")
+    return normalized
 
-    chunks = []
-    current_chunk = []
-    current_word_count = 0
 
-    for paragraph in paragraphs:
+def chunk_text(text: str, target_words: int = 300, overlap_words: int = 50) -> list[str]:
+    """Create fixed-size overlapping chunks so long paragraphs are never left unsplit."""
 
-        paragraph = paragraph.strip()
+    if target_words <= 0:
+        raise ValueError("target_words must be positive")
+    if overlap_words < 0 or overlap_words >= target_words:
+        raise ValueError("overlap_words must be between 0 and target_words")
 
-        if not paragraph:
-            continue
+    words = text.split()
+    if not words:
+        return []
 
-        words = paragraph.split()
-
-        # If adding this paragraph would make the chunk too large,
-        # save the current chunk first.
-        if current_word_count + len(words) > target_words:
-            if current_chunk:
-                chunks.append(" ".join(current_chunk))
-
-            current_chunk = []
-            current_word_count = 0
-
-        current_chunk.append(paragraph)
-        current_word_count += len(words)
-
-    # Add the final chunk
-    if current_chunk:
-        chunks.append(" ".join(current_chunk))
-
+    chunks: list[str] = []
+    start = 0
+    while start < len(words):
+        end = min(start + target_words, len(words))
+        chunks.append(" ".join(words[start:end]))
+        if end == len(words):
+            break
+        start = end - overlap_words
     return chunks

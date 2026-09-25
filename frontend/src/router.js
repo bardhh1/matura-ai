@@ -1,25 +1,36 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import Home from "./views/Home.vue";
-import Chat from "./views/Chat.vue";
-import Quiz from "./views/Quiz.vue";
+import Dashboard from "./views/Dashboard.vue";
+import LearningSession from "./views/LearningSession.vue";
+import Library from "./views/Library.vue";
+import PracticeLauncher from "./views/PracticeLauncher.vue";
 
 
 const routes = [
 
     {
         path: "/",
-        component: Home
+        component: Dashboard
     },
 
     {
-        path: "/chat",
-        component: Chat
+        path: "/diagnostic/:sessionId",
+        name: "session",
+        component: LearningSession
     },
 
     {
-        path: "/quiz",
-        component: Quiz
+        path: "/practice/:sessionId",
+        name: "practice-session",
+        component: LearningSession
+    },
+    {
+        path: "/practice",
+        component: PracticeLauncher
+    },
+    {
+        path: "/library",
+        component: Library
     }
 
 ];

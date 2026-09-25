@@ -109,3 +109,11 @@ desktop.ini
 *.swp
 *.swo
 *~
+
+# Codex-generated slide build and validation workspaces
+.codex-deck-build/
+.codex-deck-render*/
+.codex-finalizer/
+
+# Graphify's machine-local AST cache contains absolute workspace paths.
+graphify-out/cache/

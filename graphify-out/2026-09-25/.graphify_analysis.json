@@ -1,0 +1,590 @@
+{
+  "communities": {
+    "0": [
+      "backend_app_config",
+      "backend_app_config_get_settings",
+      "backend_app_config_rationale_9",
+      "backend_app_config_settings",
+      "backend_app_config_settings_overlap_must_be_smaller_than_chunk",
+      "backend_app_config_settings_parse_allowed_origins",
+      "backend_app_container",
+      "backend_app_container_appcontainer",
+      "backend_app_container_create_container",
+      "backend_app_db_session",
+      "backend_app_db_session_create_database",
+      "backend_app_db_session_database",
+      "backend_app_main",
+      "backend_app_main_create_app",
+      "backend_app_routes_chat_routes",
+      "backend_app_routes_chat_routes_create_chat_router",
+      "backend_app_routes_document_routes",
+      "backend_app_routes_document_routes_create_document_router",
+      "backend_app_routes_quiz_routes",
+      "backend_app_routes_quiz_routes_create_quiz_router",
+      "backend_app_seed_data",
+      "backend_app_seed_data_rationale_1",
+      "backend_migrations_env",
+      "backend_migrations_env_run_migrations_offline",
+      "backend_migrations_env_run_migrations_online",
+      "backend_scripts_seed_demo",
+      "backend_scripts_seed_demo_seed",
+      "backend_tests_conftest",
+      "backend_tests_conftest_client",
+      "backend_tests_conftest_fakeembeddingservice",
+      "backend_tests_conftest_fakeembeddingservice_embed_documents",
+      "backend_tests_conftest_fakeembeddingservice_embed_text",
+      "backend_tests_conftest_fakeembeddingservice_embedding",
+      "backend_tests_conftest_fakellmservice",
+      "backend_tests_conftest_fakellmservice_answer_question",
+      "backend_tests_conftest_fakequizservice",
+      "backend_tests_conftest_fakequizservice_generate_questions",
+      "basesettings",
+      "fastapi"
+    ],
+    "1": [
+      "backend_app_db_base",
+      "backend_app_db_base_base",
+      "backend_app_models_entities",
+      "backend_app_models_entities_attempt",
+      "backend_app_models_entities_learner",
+      "backend_app_models_entities_learningsession",
+      "backend_app_models_entities_question",
+      "backend_app_models_entities_skill",
+      "backend_app_models_entities_subject",
+      "backend_app_models_entities_tutorinteraction",
+      "backend_app_seed_data_seed_demo_content",
+      "backend_app_store_learning_repository",
+      "backend_app_store_learning_repository_learningrepository",
+      "backend_app_store_learning_repository_learningrepository_add_attempt",
+      "backend_app_store_learning_repository_learningrepository_add_tutor_interaction",
+      "backend_app_store_learning_repository_learningrepository_count_help",
+      "backend_app_store_learning_repository_learningrepository_create_learner",
+      "backend_app_store_learning_repository_learningrepository_create_session",
+      "backend_app_store_learning_repository_learningrepository_diagnostic_questions",
+      "backend_app_store_learning_repository_learningrepository_get_learner",
+      "backend_app_store_learning_repository_learningrepository_get_question",
+      "backend_app_store_learning_repository_learningrepository_get_session",
+      "backend_app_store_learning_repository_learningrepository_get_skill",
+      "backend_app_store_learning_repository_learningrepository_get_subject",
+      "backend_app_store_learning_repository_learningrepository_has_answered",
+      "backend_app_store_learning_repository_learningrepository_init",
+      "backend_app_store_learning_repository_learningrepository_learner_attempts",
+      "backend_app_store_learning_repository_learningrepository_list_subjects",
+      "backend_app_store_learning_repository_learningrepository_list_track_skills",
+      "backend_app_store_learning_repository_learningrepository_practice_questions",
+      "backend_app_store_learning_repository_learningrepository_session_attempts",
+      "backend_app_store_learning_repository_learningrepository_track_subject_codes",
+      "backend_app_store_learning_repository_learningrepository_update_learner",
+      "backend_app_store_learning_repository_py_session",
+      "backend_app_store_learning_repository_py_uuid",
+      "declarativebase"
+    ],
+    "2": [
+      "backend_app_errors",
+      "backend_app_errors_applicationerror",
+      "backend_app_errors_emptydocumenterror",
+      "backend_app_errors_invalidlearningstateerror",
+      "backend_app_errors_learnernotfounderror",
+      "backend_app_errors_learningsessionnotfounderror",
+      "backend_app_errors_questionnotfounderror",
+      "backend_app_errors_unsupporteddocumenterror",
+      "backend_app_errors_uploadtoolargeerror",
+      "backend_app_services_document_service",
+      "backend_app_services_document_service_chunk_text",
+      "backend_app_services_document_service_extract_text",
+      "backend_app_services_document_service_rationale_10",
+      "backend_app_services_document_service_rationale_35",
+      "backend_app_services_learning_service",
+      "backend_app_services_learning_service_learningservice",
+      "backend_app_services_learning_service_learningservice_answer",
+      "backend_app_services_learning_service_learningservice_init",
+      "backend_app_services_learning_service_learningservice_learner_or_error",
+      "backend_app_services_learning_service_learningservice_mastery_for",
+      "backend_app_services_learning_service_learningservice_mastery_map",
+      "backend_app_services_learning_service_learningservice_next_question",
+      "backend_app_services_learning_service_learningservice_start_diagnostic",
+      "backend_app_services_learning_service_learningservice_start_practice",
+      "backend_app_services_learning_service_mastery",
+      "backend_app_services_learning_service_py_uuid",
+      "backend_app_services_tutor_service",
+      "backend_app_services_tutor_service_tutorservice",
+      "backend_app_services_tutor_service_tutorservice_help",
+      "backend_app_services_tutor_service_tutorservice_init",
+      "backend_tests_test_document_service",
+      "backend_tests_test_document_service_test_chunk_text_does_not_create_an_overlap_only_tail",
+      "backend_tests_test_document_service_test_chunk_text_splits_long_paragraph_with_overlap",
+      "backend_tests_test_document_service_test_extract_text_rejects_unsupported_and_empty_documents",
+      "exception"
+    ],
+    "3": [
+      "backend_app_errors_documentnotfounderror",
+      "backend_app_handlers_chat_handler",
+      "backend_app_handlers_chat_handler_chathandler",
+      "backend_app_handlers_chat_handler_chathandler_ask",
+      "backend_app_handlers_chat_handler_chathandler_init",
+      "backend_app_handlers_chat_handler_py_uuid",
+      "backend_app_handlers_document_handler",
+      "backend_app_handlers_document_handler_documenthandler",
+      "backend_app_handlers_document_handler_documenthandler_init",
+      "backend_app_handlers_document_handler_documenthandler_process_document",
+      "backend_app_handlers_quiz_handler",
+      "backend_app_handlers_quiz_handler_py_uuid",
+      "backend_app_handlers_quiz_handler_quizhandler",
+      "backend_app_handlers_quiz_handler_quizhandler_generate_quiz",
+      "backend_app_handlers_quiz_handler_quizhandler_init",
+      "backend_app_models_entities_document",
+      "backend_app_models_entities_documentchunk",
+      "backend_app_services_retrieval_service",
+      "backend_app_services_retrieval_service_py_uuid",
+      "backend_app_services_retrieval_service_retrievalservice",
+      "backend_app_services_retrieval_service_retrievalservice_init",
+      "backend_app_services_retrieval_service_retrievalservice_retrieve",
+      "backend_app_store_document_repository",
+      "backend_app_store_document_repository_documentrepository",
+      "backend_app_store_document_repository_documentrepository_all_chunks",
+      "backend_app_store_document_repository_documentrepository_create",
+      "backend_app_store_document_repository_documentrepository_get",
+      "backend_app_store_document_repository_documentrepository_init",
+      "backend_app_store_document_repository_documentrepository_list_documents",
+      "backend_app_store_document_repository_documentrepository_search",
+      "backend_app_store_document_repository_py_session",
+      "backend_app_store_document_repository_py_uuid",
+      "backend_app_store_document_repository_rationale_22",
+      "backend_app_store_document_repository_retrievedchunk"
+    ],
+    "4": [
+      "backend_app_models_schemas",
+      "backend_app_models_schemas_answerrequest",
+      "backend_app_models_schemas_answerresponse",
+      "backend_app_models_schemas_catalogresponse",
+      "backend_app_models_schemas_chatrequest",
+      "backend_app_models_schemas_chatresponse",
+      "backend_app_models_schemas_dashboardresponse",
+      "backend_app_models_schemas_documentresponse",
+      "backend_app_models_schemas_documentsummary",
+      "backend_app_models_schemas_errorresponse",
+      "backend_app_models_schemas_learnercreate",
+      "backend_app_models_schemas_learnerresponse",
+      "backend_app_models_schemas_learnerupdate",
+      "backend_app_models_schemas_nextquestionresponse",
+      "backend_app_models_schemas_questionresponse",
+      "backend_app_models_schemas_quizrequest",
+      "backend_app_models_schemas_quizresponse",
+      "backend_app_models_schemas_sessionresponse",
+      "backend_app_models_schemas_skillmasteryresponse",
+      "backend_app_models_schemas_sourceresponse",
+      "backend_app_models_schemas_subjectmasteryresponse",
+      "backend_app_models_schemas_subjectresponse",
+      "backend_app_models_schemas_tutorhelprequest",
+      "backend_app_models_schemas_tutorhelpresponse",
+      "backend_app_routes_learning_routes",
+      "backend_app_routes_learning_routes_create_learning_router",
+      "backend_app_routes_learning_routes_localized",
+      "backend_app_routes_learning_routes_session_payload",
+      "basemodel"
+    ],
+    "5": [
+      "backend_app_errors_aiprovidererror",
+      "backend_app_errors_configurationerror",
+      "backend_app_services_generation_client",
+      "backend_app_services_generation_client_create_generation_client",
+      "backend_app_services_generation_client_geminigenerationclient",
+      "backend_app_services_generation_client_geminigenerationclient_client",
+      "backend_app_services_generation_client_geminigenerationclient_generate",
+      "backend_app_services_generation_client_geminigenerationclient_init",
+      "backend_app_services_generation_client_generationclient",
+      "backend_app_services_generation_client_generationclient_generate",
+      "backend_app_services_generation_client_openroutergenerationclient",
+      "backend_app_services_generation_client_openroutergenerationclient_generate",
+      "backend_app_services_generation_client_openroutergenerationclient_init",
+      "backend_app_services_llm_service",
+      "backend_app_services_llm_service_llmservice",
+      "backend_app_services_llm_service_llmservice_answer_question",
+      "backend_app_services_llm_service_llmservice_init",
+      "backend_app_services_quiz_service",
+      "backend_app_services_quiz_service_quizservice",
+      "backend_app_services_quiz_service_quizservice_generate_questions",
+      "backend_app_services_quiz_service_quizservice_init",
+      "backend_app_services_quiz_service_rationale_12",
+      "backend_tests_test_llm_service",
+      "backend_tests_test_llm_service_test_generation_provider_requires_its_api_key_only_when_requested",
+      "client",
+      "protocol"
+    ],
+    "6": [
+      "frontend_src_services_api_createdemolearner",
+      "frontend_src_services_api_createlearner",
+      "frontend_src_services_api_getcatalog",
+      "frontend_src_services_api_getdashboard",
+      "frontend_src_services_api_startdiagnostic",
+      "frontend_src_services_profile_savelearner",
+      "frontend_src_views_dashboard",
+      "frontend_src_views_dashboard_begindiagnostic",
+      "frontend_src_views_dashboard_catalog",
+      "frontend_src_views_dashboard_createprofile",
+      "frontend_src_views_dashboard_dashboard",
+      "frontend_src_views_dashboard_error",
+      "frontend_src_views_dashboard_form",
+      "frontend_src_views_dashboard_load",
+      "frontend_src_views_dashboard_loading",
+      "frontend_src_views_dashboard_onlocalechange",
+      "frontend_src_views_dashboard_opendemo",
+      "frontend_src_views_dashboard_route",
+      "frontend_src_views_dashboard_router"
+    ],
+    "7": [
+      "frontend_src_app",
+      "frontend_src_app_resetprofile",
+      "frontend_src_app_route",
+      "frontend_src_app_router",
+      "frontend_src_app_togglelocale",
+      "frontend_src_services_api_updatelearner",
+      "frontend_src_services_profile",
+      "frontend_src_services_profile_clearlearner",
+      "frontend_src_services_profile_copy",
+      "frontend_src_services_profile_learner",
+      "frontend_src_services_profile_locale",
+      "frontend_src_services_profile_stored",
+      "frontend_src_services_profile_t",
+      "frontend_src_views_dashboard_scorelabel",
+      "frontend_src_views_library",
+      "frontend_src_views_library_tab"
+    ],
+    "8": [
+      "axios",
+      "frontend_package",
+      "frontend_package_dependencies",
+      "frontend_package_dependencies_axios",
+      "frontend_package_dependencies_vue",
+      "frontend_package_dependencies_vue_router",
+      "frontend_package_devdependencies",
+      "frontend_package_devdependencies_vite",
+      "frontend_package_devdependencies_vitejs_plugin_vue",
+      "frontend_package_name",
+      "frontend_package_private",
+      "frontend_package_scripts",
+      "frontend_package_scripts_build",
+      "frontend_package_scripts_dev",
+      "frontend_package_scripts_preview",
+      "frontend_package_type",
+      "frontend_package_version",
+      "vite",
+      "vitejs_plugin_vue",
+      "vue",
+      "vue_router"
+    ],
+    "9": [
+      "frontend_src_services_api_getnextquestion",
+      "frontend_src_services_api_requesttutorhelp",
+      "frontend_src_services_api_submitanswer",
+      "frontend_src_views_learningsession",
+      "frontend_src_views_learningsession_answer",
+      "frontend_src_views_learningsession_asktutor",
+      "frontend_src_views_learningsession_error",
+      "frontend_src_views_learningsession_loading",
+      "frontend_src_views_learningsession_loadnext",
+      "frontend_src_views_learningsession_payload",
+      "frontend_src_views_learningsession_proceed",
+      "frontend_src_views_learningsession_question",
+      "frontend_src_views_learningsession_result",
+      "frontend_src_views_learningsession_route",
+      "frontend_src_views_learningsession_router",
+      "frontend_src_views_learningsession_selected",
+      "frontend_src_views_learningsession_sq",
+      "frontend_src_views_learningsession_tutormessage",
+      "frontend_src_views_learningsession_tutorreplies"
+    ],
+    "10": [
+      "backend_app_services_embedding_service",
+      "backend_app_services_embedding_service_embeddingservice",
+      "backend_app_services_embedding_service_embeddingservice_embed_documents",
+      "backend_app_services_embedding_service_embeddingservice_embed_text",
+      "backend_app_services_embedding_service_embeddingservice_init",
+      "backend_app_services_embedding_service_embeddingservice_model",
+      "backend_app_services_embedding_service_embeddingservice_validate_dimension",
+      "backend_app_services_embedding_service_rationale_17",
+      "backend_app_services_embedding_service_rationale_26",
+      "sentencetransformer"
+    ],
+    "11": [
+      "frontend_src_components_fileupload",
+      "frontend_src_components_fileupload_error",
+      "frontend_src_components_fileupload_handlefilechange",
+      "frontend_src_components_fileupload_handleupload",
+      "frontend_src_components_fileupload_message",
+      "frontend_src_components_fileupload_selectedfile",
+      "frontend_src_components_fileupload_uploading",
+      "frontend_src_services_api_setactivedocument",
+      "frontend_src_services_api_uploaddocument",
+      "frontend_src_views_home"
+    ],
+    "12": [
+      "frontend_src_components_quizgenerator",
+      "frontend_src_components_quizgenerator_activedocument",
+      "frontend_src_components_quizgenerator_createquiz",
+      "frontend_src_components_quizgenerator_error",
+      "frontend_src_components_quizgenerator_loading",
+      "frontend_src_components_quizgenerator_number",
+      "frontend_src_components_quizgenerator_questions",
+      "frontend_src_services_api",
+      "frontend_src_services_api_api",
+      "frontend_src_services_api_generatequiz",
+      "frontend_src_services_api_getactivedocument",
+      "frontend_src_views_quiz"
+    ],
+    "13": [
+      "frontend_src_components_chatbox",
+      "frontend_src_components_chatbox_activedocument",
+      "frontend_src_components_chatbox_loading",
+      "frontend_src_components_chatbox_messages",
+      "frontend_src_components_chatbox_question",
+      "frontend_src_components_chatbox_sendmessage",
+      "frontend_src_components_chatmessage",
+      "frontend_src_services_api_askquestion",
+      "frontend_src_views_chat"
+    ],
+    "14": [
+      "backend_tests_test_learning_flow",
+      "backend_tests_test_learning_flow_create_learner",
+      "backend_tests_test_learning_flow_test_demo_profile_is_ready_for_focused_practice",
+      "backend_tests_test_learning_flow_test_diagnostic_mastery_practice_and_no_answer_leakage",
+      "backend_tests_test_learning_flow_test_each_elective_builds_twelve_question_diagnostic",
+      "backend_tests_test_learning_flow_test_locale_can_change"
+    ],
+    "15": [
+      "backend_tests_test_api_flow",
+      "backend_tests_test_api_flow_test_invalid_upload_returns_structured_415",
+      "backend_tests_test_api_flow_test_missing_document_returns_structured_404",
+      "backend_tests_test_api_flow_test_upload_chat_quiz_flow",
+      "backend_tests_test_api_flow_upload_notes"
+    ],
+    "16": [
+      "backend_migrations_versions_0001_create_documents_and_chunks",
+      "backend_migrations_versions_0001_create_documents_and_chunks_downgrade",
+      "backend_migrations_versions_0001_create_documents_and_chunks_upgrade"
+    ],
+    "17": [
+      "backend_migrations_versions_0002_create_adaptive_learning",
+      "backend_migrations_versions_0002_create_adaptive_learning_downgrade",
+      "backend_migrations_versions_0002_create_adaptive_learning_upgrade"
+    ],
+    "18": [
+      "backend_app_db_init"
+    ],
+    "19": [
+      "backend_app_handlers_init"
+    ],
+    "20": [
+      "backend_app_init"
+    ],
+    "21": [
+      "backend_app_models_init"
+    ],
+    "22": [
+      "backend_app_routes_init"
+    ],
+    "23": [
+      "backend_app_services_init"
+    ],
+    "24": [
+      "backend_app_store_init"
+    ],
+    "25": [
+      "backend_scripts_run"
+    ],
+    "26": [
+      "frontend_vite_config"
+    ],
+    "27": [
+      "frontend_src_services_api_getapierror",
+      "frontend_src_services_api_startpractice",
+      "frontend_src_views_dashboard_beginpractice",
+      "frontend_src_views_practicelauncher",
+      "frontend_src_views_practicelauncher_error",
+      "frontend_src_views_practicelauncher_router"
+    ],
+    "28": [
+      "frontend_src_main",
+      "frontend_src_router",
+      "frontend_src_router_router",
+      "frontend_src_router_routes"
+    ]
+  },
+  "cohesion": {
+    "0": 0.09851551956815115,
+    "1": 0.13968253968253969,
+    "2": 0.12941176470588237,
+    "3": 0.10338680926916222,
+    "4": 0.14039408866995073,
+    "5": 0.12615384615384614,
+    "6": 0.16374269005847952,
+    "7": 0.18333333333333332,
+    "8": 0.09523809523809523,
+    "9": 0.1286549707602339,
+    "10": 0.24444444444444444,
+    "11": 0.26666666666666666,
+    "12": 0.24242424242424243,
+    "13": 0.25,
+    "14": 0.5333333333333333,
+    "15": 0.5,
+    "16": 0.6666666666666666,
+    "17": 0.6666666666666666,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 0.4,
+    "28": 0.6666666666666666
+  },
+  "gods": [
+    {
+      "id": "backend_app_store_learning_repository_learningrepository",
+      "label": "LearningRepository",
+      "degree": 33
+    },
+    {
+      "id": "backend_app_config_settings",
+      "label": "Settings",
+      "degree": 18
+    },
+    {
+      "id": "backend_app_store_document_repository_documentrepository",
+      "label": "DocumentRepository",
+      "degree": 18
+    },
+    {
+      "id": "frontend_src_services_api_getapierror",
+      "label": "getApiError()",
+      "degree": 18
+    },
+    {
+      "id": "backend_app_errors_applicationerror",
+      "label": "ApplicationError",
+      "degree": 15
+    },
+    {
+      "id": "backend_app_db_base_base",
+      "label": "Base",
+      "degree": 14
+    },
+    {
+      "id": "backend_app_services_learning_service_learningservice",
+      "label": "LearningService",
+      "degree": 14
+    },
+    {
+      "id": "backend_app_services_generation_client_generationclient",
+      "label": "GenerationClient",
+      "degree": 13
+    },
+    {
+      "id": "backend_app_container_appcontainer",
+      "label": "AppContainer",
+      "degree": 12
+    },
+    {
+      "id": "backend_app_main_create_app",
+      "label": "create_app()",
+      "degree": 12
+    }
+  ],
+  "surprises": [
+    {
+      "source": "GeminiGenerationClient",
+      "target": "Settings",
+      "source_files": [
+        "backend/app/services/generation_client.py",
+        "backend/app/config.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "GenerationClient",
+      "target": "Settings",
+      "source_files": [
+        "backend/app/services/generation_client.py",
+        "backend/app/config.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "OpenRouterGenerationClient",
+      "target": "Settings",
+      "source_files": [
+        "backend/app/services/generation_client.py",
+        "backend/app/config.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "test_generation_provider_requires_its_api_key_only_when_requested()",
+      "target": "Settings",
+      "source_files": [
+        "backend/tests/test_llm_service.py",
+        "backend/app/config.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "calls",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
+    {
+      "source": "AppContainer",
+      "target": "EmbeddingService",
+      "source_files": [
+        "backend/app/container.py",
+        "backend/app/services/embedding_service.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `create_app()` connect `Community 0` to `Community 2`, `Community 4`?",
+      "why": "High betweenness centrality (0.090) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `LearningRepository` connect `Community 1` to `Community 2`?",
+      "why": "High betweenness centrality (0.064) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `ApplicationError` connect `Community 2` to `Community 0`, `Community 3`, `Community 5`?",
+      "why": "High betweenness centrality (0.057) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 10 inferred relationships involving `LearningRepository` (e.g. with `LearningService` and `Mastery`) actually correct?",
+      "why": "`LearningRepository` has 10 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 9 inferred relationships involving `Settings` (e.g. with `AppContainer` and `GeminiGenerationClient`) actually correct?",
+      "why": "`Settings` has 9 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 6 inferred relationships involving `DocumentRepository` (e.g. with `ChatHandler` and `DocumentHandler`) actually correct?",
+      "why": "`DocumentRepository` has 6 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `name`, `private`, `version` to the rest of the system?",
+      "why": "50 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}
